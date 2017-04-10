@@ -1,0 +1,60 @@
+int main(){
+	init();
+  
+                           
+int adc_reading;
+sleep1 (0, 500000);
+int i = 0;
+int mean = 0;
+while (i < 5){
+adc_reading = read_analog(0);                  //average value of 5 readings of the ir sensor
+Mean = adc_reading + mean;
+I++;
+}
+Int reslt = mean/5;
+printf(“%d”, reslt);
+Return 0: }
+
+
+
+Int main() {
+     init();
+     set_motor(1, 100);                      //robot straight ahead
+     set_motor(2, -100);
+return 0; }
+
+
+
+Int main() {
+     init();
+     set_motor(1, 100);                      //robot turn right
+     set_motor(2, 100);
+return 0; }
+
+
+
+Int main() {
+     init();
+     set_motor(1, -100);                      //robot turn left
+     set_motor(2, -100);
+return 0; }
+
+
+
+Int main() {
+     init();
+     set_motor(1, -30);                      //robot reverse slowly
+     set_motor(2, 30);
+return 0; }
+
+
+Int main() {
+     init();
+     int adc_reading;
+	   adc_reading = read_analog(0);
+     
+     if(adc_reading >=0);
+     set_motor(1, -30);                      //robot reverse slowly if ir sensor detects something
+     set_motor(2, 30);
+
+return 0; }
